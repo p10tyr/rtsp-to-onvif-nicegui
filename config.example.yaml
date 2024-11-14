@@ -1,0 +1,43 @@
+onvif:
+  - name: Bullet
+    dev: enp2s0
+    target:
+      hostname: 192.168.1.187
+      ports:
+        rtsp: 554
+        snapshot: 80
+    highQuality:
+      rtsp: /Streaming/Channels/101/
+      snapshot: /ISAPI/Streaming/Channels/101/picture
+      width: 2048
+      height: 1536
+      framerate: 15
+      bitrate: 3072
+      quality: 4
+    ports:
+      server: 8081
+      rtsp: 8554
+      snapshot: 8080
+    uuid: ee9d1bbe-3537-4e3f-b615-ad4a7906b0b4
+    mac: 1A:11:B0:BB:B5:75
+  - name: Dome
+    dev: enp2s0
+    highQuality:
+      rtsp: /Streaming/Channels/101/
+      snapshot: /ISAPI/Streaming/Channels/101/picture
+      width: 2048
+      height: 1536
+      framerate: 15
+      bitrate: 3072
+      quality: 4
+    target:
+      hostname: 192.168.1.139
+      ports:
+        rtsp: 554
+        snapshot: 80
+    ports:
+      server: 9081
+      rtsp: 9554
+      snapshot: 9082
+    uuid: 333eb86f-e8f5-44d1-878c-ae54bc697a9b
+    mac: 1A:11:B0:3F:DF:BF
